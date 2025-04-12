@@ -27,33 +27,4 @@ export class DummyJsonAPI {
           return userResponse;
       }
 
-
-
-      /*
-    async getLogin() {
-        const userResponse = await this.request.get('https://dummyjson.com/auth/me', {
-            headers: {
-              Authorization: `Bearer ${token}`
-            }
-          });
-          return userResponse;
-      }
-*/
-
-
-      /*
-      // 🔐 FETCH CHRONIONY ZASÓB
-        const userResponse = await request.get('https://dummyjson.com/auth/me', {
-          headers: {
-            Authorization: `Bearer ${token}`
-          }
-        });
-      
-        expect(userResponse.ok()).toBeTruthy();
-        const userData = await userResponse.json();
-      
-        // ✅ SPRAWDZENIE DANYCH
-        expect(userData.username).toBe('emilys');
-        console.log('Zalogowano jako:', userData.firstName, userData.lastName);
-        */
 }

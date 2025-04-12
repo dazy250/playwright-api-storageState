@@ -1,0 +1,51 @@
+<testsuites id="" name="" tests="2" failures="1" skipped="0" errors="0" time="3.641146">
+<testsuite name="setup\globalSetup.spec.ts" timestamp="2025-04-12T17:54:21.527Z" hostname="setup" tests="1" failures="0" skipped="0" time="0.667" errors="0">
+<testcase name="Global setup" classname="setup\globalSetup.spec.ts" time="0.667">
+<system-out>
+<![CDATA[Executing global setup
+BaseUrl: https://dummyjson.com
+
+[[ATTACHMENT|output\globalSetup-Global-setup-setup\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="e2e\loggedUser.spec.ts" timestamp="2025-04-12T17:54:21.527Z" hostname="e2e" tests="1" failures="1" skipped="0" time="0.584" errors="0">
+<testcase name="Test storage state for api request" classname="e2e\loggedUser.spec.ts" time="0.584">
+<failure message="loggedUser.spec.ts:7:5 Test storage state for api request" type="FAILURE">
+<![CDATA[  [e2e] › e2e\loggedUser.spec.ts:7:5 › Test storage state for api request ›  ───────────────────────
+
+    Error: expect(received).toBeTruthy()
+
+    Received: false
+
+       at ..\domain\api\apiSandbox.ts:20
+
+      18 |     async verifyLoggedUser(firstName: string, lastName: string) {
+      19 |         let loginResponse =  await this.dummyJsonAPI.getLogin();
+    > 20 |         expect(loginResponse.ok()).toBeTruthy();
+         |                                    ^
+      21 |         const userData = await loginResponse.json();
+      22 |
+      23 |         expect(userData.username).toBe(firstName);
+        at ApiSandbox.verifyLoggedUser (C:\DAREK_PRACA\gitHub\playwright-api-bearer-token\domain\api\apiSandbox.ts:20:36)
+        at C:\DAREK_PRACA\gitHub\playwright-api-bearer-token\tests\e2e\loggedUser.spec.ts:9:5
+        at C:\DAREK_PRACA\gitHub\playwright-api-bearer-token\tests\e2e\loggedUser.spec.ts:8:3
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    output\loggedUser-Test-storage-state-for-api-request-e2e\trace.zip
+    Usage:
+
+        npx playwright show-trace output\loggedUser-Test-storage-state-for-api-request-e2e\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|output\loggedUser-Test-storage-state-for-api-request-e2e\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

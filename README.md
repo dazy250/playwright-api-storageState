@@ -1,2 +1,2 @@
-# playwright-api-storageState
-playwright-api-storageState
+# playwright-storageState
+playwright - how to use storageState for tests - example
